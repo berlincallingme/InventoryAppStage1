@@ -3,10 +3,11 @@ package com.example.brand.inventoryappstage1.data;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import com.example.brand.inventoryappstage1.data.InventoryAppContract.InventoryAppEntry;
 
 
-public class InventoryAppDbHelper  extends SQLiteOpenHelper {
+public class InventoryAppDbHelper extends SQLiteOpenHelper {
 
     public static final String LOG_TAG = InventoryAppDbHelper.class.getSimpleName();
 
@@ -21,14 +22,13 @@ public class InventoryAppDbHelper  extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the pets table
-        String SQL_CREATE_INVENTORY_APP_TABLE =  "CREATE TABLE " + InventoryAppEntry.TABLE_NAME + " ("
+        String SQL_CREATE_INVENTORY_APP_TABLE = "CREATE TABLE " + InventoryAppEntry.TABLE_NAME + " ("
                 + InventoryAppEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + InventoryAppEntry.PROUDCT_NAME_COLUMN + " TEXT NOT NULL, "
                 + InventoryAppEntry.PRODUCT_PRICE_COLUMN + " INTEGER, "
                 + InventoryAppEntry.PRODUCT_QUANTITY_COLUMN + " INTEGER DEFAULT 0,"
                 + InventoryAppEntry.PRODUCT_SUPPLIER_COLUMN + "TEXT,"
                 + InventoryAppEntry.SUPPLIER_PHONE_NUMBER_COLUMN + " TEXT);";
-
 
 
         // Execute the SQL statement

@@ -9,7 +9,6 @@ import com.example.brand.inventoryappstage1.data.InventoryAppContract.InventoryA
 
 public class InventoryAppDbHelper extends SQLiteOpenHelper {
 
-    public static final String LOG_TAG = InventoryAppDbHelper.class.getSimpleName();
 
     private static final String DATABASE_NAME = "inventoryapp.db";
 
@@ -21,17 +20,14 @@ public class InventoryAppDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // Create a String that contains the SQL statement to create the pets table
         String SQL_CREATE_INVENTORY_APP_TABLE = "CREATE TABLE " + InventoryAppEntry.TABLE_NAME + " ("
                 + InventoryAppEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + InventoryAppEntry.PROUDCT_NAME_COLUMN + " TEXT NOT NULL, "
                 + InventoryAppEntry.PRODUCT_PRICE_COLUMN + " INTEGER, "
-                + InventoryAppEntry.PRODUCT_QUANTITY_COLUMN + " INTEGER DEFAULT 0,"
-                + InventoryAppEntry.PRODUCT_SUPPLIER_COLUMN + "TEXT,"
+                + InventoryAppEntry.PRODUCT_QUANTITY_COLUMN + " INTEGER DEFAULT 0, "
+                + InventoryAppEntry.PRODUCT_SUPPLIER_COLUMN + " TEXT,"
                 + InventoryAppEntry.SUPPLIER_PHONE_NUMBER_COLUMN + " TEXT);";
 
-
-        // Execute the SQL statement
         db.execSQL(SQL_CREATE_INVENTORY_APP_TABLE);
     }
 

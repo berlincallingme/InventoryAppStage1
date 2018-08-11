@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">InventoryAppStage1</string>
+    <string name="product_name">Ptoduct Name</string>
+    <string name="hint_product_name">Product Name</string>
+    <string name="product_price">Product Price</string>
+    <string name="hint_product_price">Product Price</string>
+    <string name="product_quantity">Product Quantity</string>
+    <string name="hint_product_quantity">Product Quantity</string>
+    <string name="supplier_phone_number">Supplier Phone Number</string>
+    <string name="supplier_name">Supplier Name</string>
+    <string name="save_button_text">Save</string>
+    <string name="empty_view_title_text">Nothing to show now</string>
+    <string name="empty_view_subtitle_text">Nothing to show now</string>
+    <string name="delete_dialog_msg">do you want to delete this product?</string>
+    <string name="delete">delete</string>
+    <string name="cancel">cancel</string>
+    <string name="call_supplier_text">call supplier</string>
 </resources>
